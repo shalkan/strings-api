@@ -30,7 +30,7 @@ public interface InverseApi {
             @ApiResponse(code = 200, message = "inversed string returned", response = String.class),
             @ApiResponse(code = 400, message = "bad input parameter") })
     @RequestMapping(value = "/inverse",
-            produces = { "application/json" },
+            produces = { "text/plain" },
             method = RequestMethod.GET)
     ResponseEntity<String> inverse(@NotNull @ApiParam(value = "input string to inverse", required = true) @Valid @RequestParam(value = "inputString", required = true) String inputString);
 
